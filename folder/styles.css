@@ -1,6 +1,11 @@
 
-nav{display: flex;
+nav {display: flex;
     flex-direction: row;
+}
+
+.login-icon {
+    width: 1vw;
+    height: auto;
 }
     
 .Start-free-trial {background-color: rgb(0, 205, 102)}
