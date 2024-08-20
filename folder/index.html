@@ -5,36 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale: 1.0">
     <link href="styles.css" rel="stylesheet">
     <title>Blinkist-Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header>
       <nav>
-        <div class="home">
-          <img src="./pictures/Blinkist-logo.JPG">
-          <a href="#">Blinkist</a>
+        <div class="home-and-dropdown">
+          <div class="home">
+           
+            <a class="home" href="https://www.blinkist.com/">
+              <img class="blinkist-logo" src="./pictures/Blinkist-logo.JPG">Blinkist</a>
+          </div>
+          <ul class="navbar">
+            <li>
+              <a href="#" id="categories-link">Categories</a>
+              <ul class="dropdown-content">
+                <li>
+                  <a href="#">Inspiration & Personal Growth</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Personal Development</a></li>
+                    <li><a href="#">Productivity</a></li>
+                    <li><a href="#">Motivation & Inspiration</a></li>
+                    <li><a href="#">Communication Skills</a></li>
+                    <li><a href="#">Biography & Memoir</a></li>
+                    <li><a href="#">Religion & Spirituality</a></li>
+                    <li><a href="#">Philosophy</a></li>
+                    <li><a href="#">Creativity</a></li>
+                    <li><a href="#">Education</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Health & Meditation</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Psychology</a></li>
+                    <li><a href="#">Mindfullness & Happyness</a></li>
+                    <li><a href="#">Health & Nutrition</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Career & Business</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Career & Success</a></li>
+                    <li><a href="#">Management & Leadership</a></li>
+                    <li><a href="#">Productivity</a></li>
+                    <li><a href="#">Entrepreneurship</a></li>
+                    <li><a href="#">Marketing & Sales</a></li>
+                    <li><a href="#">Corporate Culture</a></li>
+                    <li><a href="#">Education</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Relationship & Family</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Psychology</a></li>
+                    <li><a href="#">Communication Skills</a></li>
+                    <li><a href="#">Sex & Relationships</a></li>
+                    <li><a href="#">Parenting</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Science & Technology</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Technology & the Future</a></li>
+                    <li><a href="#">Nature & the Environment</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Culture & Humanity</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Society & Culture</a></li>
+                    <li><a href="#">Biography & Memoir</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Philosophy</a></li>
+                    <li><a href="#">Religion & Spirituality</a></li>
+                    <li><a href="#">Politics</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Money & Economics</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Money & Investments</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Economics</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Fiction</a>
+                  <ul class="sub-dropdown">
+                    <li><a href="#">Book Types</a></li>
+                    <li><a href="#">Fantasy</a></li>
+                    <li><a href="#">Fiction</a></li>
+                    <li><a href="#">Fiction Authors</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="dropdown">
+        <div class="business-coaching-login-button">
+          <a class="business" href="https://www.blinkist.com/en/content/business?utm_campaign=header&utm_medium=link&utm_source=homepage">For Business</a>
+          <a class="coaching" href="https://www.coachingbyblinkist.com/?utm_campaign=header&utm_medium=link&utm_source=homepage">Coaching</a>
+          <div class="login">
+
+            <a class="login" href="#">
+              <img src="./pictures/login.png" class="login-icon" alt="Login Icon">Login</a>
+          </div>
+          <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="start-free-trial-nav">Start free trial</a>
         </div>
-        <a href="#">For Business</a>
-        <a href="#">Coaching</a>
-        <div class="login">
-          <img src="./pictures/login.png" class="login-icon">
-          <a href="#">Login</a>
-        </div>
-        <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="Start-free-trial">Start free trial</a>
       </nav>
     </header>
-    <section>
-      <h1>Learn <span>something new</span> every day</h1>
-      <p>Get the key ideas from the top <span>books</span>, <span>podcasts</span>, and <span>experts</span> in 15 minutes with the Blinkist app.</p>
-      <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="Start-free-trial">Start your free trial</a>
-      <!-- span einfügen für style innerhalb von textabschnitten und in klassen einteilen! -->
+    <div class="learn-something-new-container">
+      <section class="learn-something-new-section">
+        <h1 class="learn-something-new-header">Learn <em class="learn-something-new-em">something new</em> every day</h1>
+        <p class="learn-something-new-p">Get the key ideas from the top</p>
+        <p class="learn-something-new-p"><span class="books">books</span>, <span class="podcasts">podcasts</span>, and <span class="experts">experts</span></p>
+        <p class="learn-something-new-p">in 15 minutes with the Blinkist app.</p>
+        <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="start-free-trial-learn-something-new-section">Start your free trial</a>
     </section>
-    <div class="example-multiple-devices">
-      <img src="./pictures/example-multiple-devices.JPG" alt="Blinkist on different devices">
     
-    </div>    
-    
+      <div class="example-multiple-devices">
+        <img src="./pictures/example-multiple-devices.JPG" alt="Blinkist on different devices">
+      </div>    
+    </div>
     <div>
       <h1>Understand key ideas in 15 minutes</h1>
       <section>
@@ -109,7 +203,7 @@
         <div>Javascript Book Recomendations onklick</div>
       </section>
     </div>
-    <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="Start-free-trial">Start your free trial</a>
+    <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="start-free-trial">Start your free trial</a>
     <section class="level-up">
       <h1>How will you level up?</h1>
       <p>Listen, read, or get interactive—however you like to learn, you'll find it here!</p>
@@ -140,7 +234,7 @@
           <blockquote><span>This is simply the coolest app that exists.</span> Deserved full credit. It's much nicer to spend your time learning new knowledge, rather than spending hours browsing social media.</blockquote>
         </div>
       </div>
-      <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="Start-free-trial">Start your free trial</a>
+      <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="start-free-trial">Start your free trial</a>
     </section>
     <div class="percentages">
       <div>
@@ -161,7 +255,7 @@
       <h1>Start with a 7-day free trial</h1>
       <p>Get unlimited access to 7,500 nonfiction books and podcasts.</p>
       <p>Cancel anytime during your trial</p>
-      <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="Start-free-trial">Start your free trial</a>
+      <a href="https://www.blinkist.com/en/onboarding/matrix/age" class="start-free-trial">Start your free trial</a>
       <p>How your free trial works:</p>
       <h2>Today: trial starts</h2>
       <p>Enjoy the entire library, free for 7 days.</p>
@@ -344,6 +438,35 @@
 
       </section>
     </section>
+
+    <script>
+      document.getElementById('categories-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    var dropdown = this.nextElementSibling;
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+});
+
+// Optionale Logik, um die Unterpunkte des ersten Links standardmäßig anzuzeigen
+document.querySelector('.dropdown-content li:first-child > a').addEventListener('mouseenter', function() {
+    this.nextElementSibling.style.display = 'block';
+});
+
+      // Funktion zum Umschalten der Sichtbarkeit des Dropdown-Menüs
+      document.getElementById('categories-link').addEventListener('click', function(event) {
+          event.preventDefault(); // Verhindert das Standardverhalten des Links
+          var dropdown = this.nextElementSibling; // Greift auf das nächste Element (Dropdown) zu
+          if (dropdown.style.display === 'block') {
+              dropdown.style.display = 'none'; // Versteckt das Dropdown-Menü
+          } else {
+              dropdown.style.display = 'block'; // Zeigt das Dropdown-Menü an
+          }
+      });
+  </script>
+  
   </body>
 </html>
 

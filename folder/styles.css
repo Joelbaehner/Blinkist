@@ -1,14 +1,239 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Regular.woff2') format('woff2'),
+         url('/fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
 
 nav {display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-and-dropdown {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: center;
+}
+.navbar > li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20 px;
+}
+
+.navbar > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+}
+/* Dropdown-Menü Stile */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+        /* Unterpunkte des Dropdowns */
+        .dropdown-content .sub-dropdown {
+            display: none;
+            position: absolute;
+            left: 160px;
+            top: 0;
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-content .sub-dropdown a {
+            padding: 8px 16px;
+        }
+
+        /* Hover und Klick-Logik */
+        .navbar > li:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover + .sub-dropdown {
+            display: block;
+        }
+.blinkist-logo{
+    margin-right: 2px;
+    vertical-align: middle;
+
+}
+
+.home{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.business-coaching-login-button {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.business, .coaching, .login {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.login {
+    display: flex;
 }
 
 .login-icon {
     width: 1vw;
     height: auto;
 }
-    
-.Start-free-trial {background-color: rgb(0, 205, 102)}
+
+.login-icon {
+    margin-right: 8px;
+    vertical-align: middle; 
+}
+
+
+.start-free-trial-nav{
+    display: inline-block;
+    background-color: rgb(67, 205, 128);
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 125px;
+}
+
+.navbar:hover,
+.business:hover,
+.coaching:hover,
+.login:hover {
+    color: blue;
+
+}
+.start-free-trial-nav:hover{
+    background-color: rgb(0, 139, 69);
+}
+
+.learn-something-new-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.learn-something-new-section{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.learn-something-new-header{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.learn-something-new-em{
+  font-weight: normal;
+}
+.learn-something-new-p{
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin: 5px;
+    color: rgb(82, 82, 82);
+}
+
+.books{
+    background-color: rgb(209, 238, 238);
+    border-radius: 15px;
+    padding: 3px 10px;
+}
+.podcasts{
+    background-color: rgb(255, 228, 255);
+    border-radius: 15px;
+    padding: 3px 10px;
+}
+
+.experts{
+    background-color: rgb(229, 229, 229);
+    border-radius: 15px;
+    padding: 3px 10px;
+}
+
+.start-free-trial-learn-something-new-section {
+    margin-top: 25px;
+    display: inline-block;
+    background-color: rgb(0, 205, 102);
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 250px;
+}
+
+
+.example-multiple-devices{
+    flex-shrink: 0;
+    margin-top: 60px;
+}
+
+.start-free-trial {
+    display: inline-block;
+    background-color: rgb(0, 205, 102);
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 250px;
+}
+.start-free-trial:hover{
+    background-color: rgb(0, 139, 69);
+}
+
 .7-day-trial {background-color: rgb(255, 187, 255);}
 .accordion input[type="checkbox"] {
     display: none;
