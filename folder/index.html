@@ -440,9 +440,21 @@
     </section>
 
     <script>
-      document.getElementById('categories-link').addEventListener('click', function(event) {
+// Funktion zum Umschalten der Sichtbarkeit des Haupt-Dropdown-Menüs
+document.getElementById('categories-link').addEventListener('click', function(event) {
     event.preventDefault();
+    
     var dropdown = this.nextElementSibling;
+    
+    // Alle anderen Dropdowns schließen
+    var allDropdowns = document.querySelectorAll('.dropdown-content');
+    allDropdowns.forEach(function(d) {
+        if (d !== dropdown) {
+            d.style.display = 'none';
+        }
+    });
+    
+    // Das angeklickte Dropdown umschalten
     if (dropdown.style.display === 'block') {
         dropdown.style.display = 'none';
     } else {
@@ -450,21 +462,66 @@
     }
 });
 
-// Optionale Logik, um die Unterpunkte des ersten Links standardmäßig anzuzeigen
-document.querySelector('.dropdown-content li:first-child > a').addEventListener('mouseenter', function() {
-    this.nextElementSibling.style.display = 'block';
+// Öffnen des Sub-Dropdowns beim Hover
+document.querySelectorAll('.dropdown-content > li').forEach(function(item) {
+    item.addEventListener('mouseenter', function() {
+        var subDropdown = this.querySelector('.sub-dropdown');
+        
+        // Schließe alle anderen Sub-Dropdowns
+        document.querySelectorAll('.sub-dropdown').forEach(function(sub) {
+            sub.style.display = 'none';
+        });
+
+        if (subDropdown) {
+            subDropdown.style.display = 'block';
+        }
+    });
 });
 
-      // Funktion zum Umschalten der Sichtbarkeit des Dropdown-Menüs
-      document.getElementById('categories-link').addEventListener('click', function(event) {
-          event.preventDefault(); // Verhindert das Standardverhalten des Links
-          var dropdown = this.nextElementSibling; // Greift auf das nächste Element (Dropdown) zu
-          if (dropdown.style.display === 'block') {
-              dropdown.style.display = 'none'; // Versteckt das Dropdown-Menü
-          } else {
-              dropdown.style.display = 'block'; // Zeigt das Dropdown-Menü an
-          }
-      });
+// Entferne das automatische Schließen beim Verlassen des Sub-Dropdowns
+document.querySelectorAll('.dropdown-content > li').forEach(function(item) {
+    item.addEventListener('mouseleave', function() {
+        var subDropdown = this.querySelector('.sub-dropdown');
+
+        // Sub-Dropdown bleibt geöffnet, selbst wenn die Maus den Bereich verlässt
+        if (subDropdown) {
+            subDropdown.style.display = 'block';
+        }
+    });
+});
+
+// Sicherstellen, dass das Haupt-Dropdown offen bleibt, wenn die Maus woanders ist
+document.querySelectorAll('.navbar > li').forEach(function(mainItem) {
+    mainItem.addEventListener('mouseenter', function() {
+        var currentDropdown = mainItem.querySelector('.dropdown-content');
+        
+        // Schließe alle anderen Dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(function(dropdown) {
+            if (dropdown !== currentDropdown) {
+                dropdown.style.display = 'none';
+            }
+        });
+        
+        // Öffne das Dropdown des aktuellen Hauptpunkts
+        if (currentDropdown) {
+            currentDropdown.style.display = 'block';
+        }
+    });
+});
+
+// Schließe Dropdowns bei einem Klick außerhalb des Menüs
+document.addEventListener('click', function(event) {
+    var isClickInsideDropdown = document.querySelector('.home-and-dropdown').contains(event.target);
+    if (!isClickInsideDropdown) {
+        document.querySelectorAll('.dropdown-content').forEach(function(dropdown) {
+            dropdown.style.display = 'none';
+        });
+        document.querySelectorAll('.sub-dropdown').forEach(function(subDropdown) {
+            subDropdown.style.display = 'none';
+        });
+    }
+});
+
   </script>
   
   </body>

@@ -28,6 +28,7 @@ nav {display: flex;
 }
 
 .navbar {
+    color: black;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,6 +36,10 @@ nav {display: flex;
     align-items: center;
     cursor: pointer;
     vertical-align: center;
+}
+
+#categories-link {
+    color: black;
 }
 .navbar > li {
     display: inline-block;
@@ -47,7 +52,7 @@ nav {display: flex;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-    background-color: #333;
+
 }
 /* Dropdown-Menü Stile */
 .dropdown-content {
@@ -67,7 +72,7 @@ nav {display: flex;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    color: blue;
 }
         /* Unterpunkte des Dropdowns */
         .dropdown-content .sub-dropdown {
@@ -75,7 +80,8 @@ nav {display: flex;
             position: absolute;
             left: 160px;
             top: 0;
-            background-color: #f1f1f1;
+            background-color: #f9f9f9;
+
         }
 
         .dropdown-content .sub-dropdown a {
